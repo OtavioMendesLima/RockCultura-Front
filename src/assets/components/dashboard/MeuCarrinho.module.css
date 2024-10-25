@@ -1,0 +1,32 @@
+.carrinhoContainer {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .carrinhoItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  .carrinhoImage {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .carrinhoInfo {
+    flex: 1;
+  }
+  
+  .removerButton {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  

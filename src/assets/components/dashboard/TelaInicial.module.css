@@ -1,0 +1,124 @@
+.productsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ocupa no mínimo a altura da tela */
+  padding: 20px;
+}
+
+.productsTitle {
+  padding-top: 10px;
+  padding-bottom: 8px;
+  font-size: 40px;
+  color: #003580;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid #003580; /* Adiciona uma linha embaixo */
+  margin-bottom: 55px;
+}
+
+.productsItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px; /* Espaço maior entre os itens */
+}
+
+.productItem {
+  padding: 20px; /* Ajustado o padding para reduzir o tamanho dos itens */
+  width: 250px; /* Tamanho fixo para alinhamento uniforme */
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.productItem:hover {
+  transform: scale(1.03);
+}
+
+.productImage {
+  width: 100%;
+  height: 245px; /* Altura fixa para imagens */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.productInfo {
+  color: #333;
+  text-align: center;
+}
+
+.productName {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #003580;
+}
+
+.productPrice,
+.productMaterial,
+.productSizes {
+  font-size: 14px;
+  margin-bottom: 5px;
+  min-height: 20px; /* Altura fixa para garantir alinhamento */
+}
+
+.addToCartButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #003580;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Empurra o botão para o final */
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.addToCartButton:hover {
+  background-color: #004ba0;
+}
+
+.addToCartButton svg {
+  margin-right: 8px;
+}
+
+.descriptionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5; /* Cor de fundo */
+  padding: 40px;
+  width: 100%; /* Garantir que ocupe toda a largura */
+  margin-top: 230px; /* Ajuste para a altura da NavBar */
+
+}
+
+.descriptionImage {
+  width: 20%; /* Ajuste conforme necessário */
+  height: auto; /* Mantém a proporção */
+  margin-right: 50px; /* Espaço entre imagem e texto */
+  border-radius: 1px;
+}
+
+.descriptionText {
+  color: #333; /* Cor do texto */
+  text-align: left; /* Alinhamento do texto */
+  max-width: 1000px;
+}
+
+.descriptionText h2 {
+  color: #003580; /* Azul para o título */
+  margin-bottom: 10px;
+}
