@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import Style from './TelaCadastro.module.css';
 
 const TelaCadastro = () => {
@@ -16,9 +17,19 @@ const TelaCadastro = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Cadastro realizado:', formData);
+    
+    try {
+      const response = await axios.post('http://localhost:3000/api/cadastro', formData, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      console.log('Cadastro realizado:', response.data);
+    } catch (error) {
+      console.error('Erro ao cadastrar:', error);
+    }
   };
 
   return (
