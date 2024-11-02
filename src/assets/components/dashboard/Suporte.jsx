@@ -13,7 +13,7 @@ const Suporte = () => {
         <div className={styles.suporteContainer}>
           <h2 className={styles.titulo}>
             <FaHeadset className={styles.tituloIcon} />
-            FALE CONOSCO
+            SUPORTE
           </h2>
           <div className={styles.contato}>
             <a

@@ -6,7 +6,7 @@ import './index.css'; // Estilos globais
 import TelaIncial from '../src/assets/components/dashboard/TelaInicial';
 import MeuCarrinho from  './assets/components/dashboard/MeuCarrinho';
 import Suporte from '../src/assets/components/dashboard/Suporte';
-import TelaCadastro from './assets/components/register/TelaCadastro'
+import MinhaConta from './assets/components/register/MinhaConta'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         
       <Route path="/" element={<TelaIncial />} />
       <Route path="/meu-carrinho" element={<MeuCarrinho />} />
-      <Route path="/cadastro" element={<TelaCadastro />} />
+      <Route path="/minha-conta" element={<MinhaConta />} />
       <Route path="/suporte" element={<Suporte />} />
       
       </Routes>

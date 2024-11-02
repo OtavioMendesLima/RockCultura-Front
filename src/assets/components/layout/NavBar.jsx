@@ -3,13 +3,13 @@ import { Outlet, Link, useNavigate } from 'react-router-dom';
 import Style from './NavBar.module.css';
 import { FaUser } from 'react-icons/fa';
 import Suporte from  '../dashboard/Suporte'
-import Cadastro from '../register/TelaCadastro'
+import MinhaConta from '../register/MinhaConta'
 
 const NavBar = ({ Nome}) => {
   const navigate = useNavigate();
 
-  const handleNavigateToCadastroEmpresa = () => {
-    navigate('/cadastro');
+  const handleNavigateMinhaConta = () => {
+    navigate('/minha-conta');
   };
 
 const handlenavigateSuporte = () => {
@@ -40,8 +40,8 @@ const handlenavigateSuporte = () => {
 
           {/* Ícone de Minha Conta */}
           <li className={`${Style.item} ${ Style.account}`}>
-            <Link to='/cadastro'>
-            <FaUser className={Style.userIcon} oncClick={handleNavigateToCadastroEmpresa}/>
+            <Link to='/minha-conta'>
+            <FaUser className={Style.userIcon} oncClick={handleNavigateMinhaConta}/>
               <p>{Nome}</p> {/* Exibe o nome do usuário */}
             </Link>
           </li>

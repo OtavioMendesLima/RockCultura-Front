@@ -1,0 +1,136 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo da NavBar fixa */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+.navbar img {
+  height: 50px; /* Ajuste conforme necessário */
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #ccc;
+}
+
+/* Conteúdo principal */
+.content {
+  padding-top: 100px; /* Ajuste para corresponder à altura da NavBar */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Container dos formulários */
+.form-container {
+  width: 100%;
+  max-width: 800px; /* Aumente para acomodar os dois formulários lado a lado */
+  margin: 0 auto;
+  display: flex; /* Para que os formulários fiquem lado a lado */
+  justify-content: space-around; /* Para espaçar os formulários */
+  gap: 50%;
+}
+
+/* Estilo dos blocos de login e cadastro */
+.login, .register {
+  background-color: #f8f8f8;
+  padding: 20px;
+  margin: 20px; /* Ajuste a margem para controlar o espaçamento entre os formulários */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Permite que ambos os formulários ocupem espaço igual */
+  min-width: 300px; /* Define uma largura mínima */
+}
+
+/* Inputs e botões */
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"] {
+  width: calc(20% - 22px); /* Ajuste a largura para ocupar 100% do contêiner, menos as margens */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+/* Links adicionais */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.icon {
+  font-size: 15px;
+  margin-right: 1%;
+  color: #000;
+}
+
+/* Estilo dos grupos de inputs */
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Espaçamento entre os grupos de inputs */
+}
+
+.input-group input {
+  flex: 1; /* O input ocupa o restante do espaço disponível */
+  width: 80%; /* Define a largura dos inputs em 80% do espaço do grupo */
+  padding: 10px; /* Espaçamento interno do input */
+  border: 1px solid #ccc; /* Borda padrão para o input */
+  border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Estilo do botão de submissão */
+.submit-button {
+  width: 100%; /* Faz com que o botão ocupe a largura total do formulário */
+  padding: 10px; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão do botão */
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  border-radius: 4px; /* Bordas arredondadas do botão */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.submit-button:hover {
+  background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
