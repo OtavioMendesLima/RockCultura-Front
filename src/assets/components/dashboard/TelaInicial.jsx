@@ -1,11 +1,13 @@
-
-import React, { useState } from 'react';
+import React from 'react';
 import { FaCartPlus } from 'react-icons/fa';
-import Style from './TelaInicial.module.css'; 
+import Style from './TelaInicial.module.css';
 import NavBar from '../layout/NavBar';
 import Footer from '../layout/Footer';
+import { useCarrinho } from '../context/CarrinhoContext';
 
 const TelaInicial = () => {
+  const { adicionarAoCarrinho } = useCarrinho();
+
   const Produtos = [
     {
       nome: 'Camiseta AC/DC',
@@ -36,7 +38,7 @@ const TelaInicial = () => {
       imagem: 'guns_logo.png',
     },
     {
-      nome: 'Camiseta Iran Maden',
+      nome: 'Camiseta Iron Maiden',
       preco: 'R$ 89,90',
       material: '100% Algodão',
       tamanhos: 'P, M, G, GG',
@@ -64,14 +66,15 @@ const TelaInicial = () => {
       imagem: 'voltaquedeumerda.png',
     },
   ];  
+
   return (
     <>
       <NavBar />
       <div className={Style.descriptionContainer}>
         <img src="loja.png" alt="Descrição da Loja" className={Style.descriptionImage} />
         <div className={Style.descriptionText}>
-          <h2>Bem-vindo à Rock Cultura!</h2>
-          <p>Descubra camisetas exclusivas que refletem sua personalidade e estilo. Cada peça é feita com cuidado, utilizando materiais de alta qualidade. Navegue pela nossa coleção e encontre a camiseta perfeita para você!Descubra camisetas exclusivas que refletem sua personalidade e estilo. Cada peça é feita com cuidado, utilizando materiais de alta qualidade. Navegue pela nossa coleção e encontre a camiseta perfeita para vocêDescubra camisetas exclusivas que refletem sua personalidade e estilo. Cada peça é feita com cuidado, utilizando materiais de alta qualidade. Navegue pela nossa coleção e encontre a camiseta perfeita para você</p>
+        <h2>Bem-vindo à Rock Cultura!</h2>
+        <p>Descubra camisetas exclusivas que refletem sua personalidade e estilo. Cada peça é feita com cuidado, utilizando materiais de alta qualidade. Navegue pela nossa coleção e encontre a camiseta perfeita para você!Descubra camisetas exclusivas que refletem sua personalidade e estilo. Cada peça é feita com cuidado, utilizando materiais de alta qualidade. Navegue pela nossa coleção e encontre a camiseta perfeita para vocêDescubra camisetas exclusivas que refletem sua personalidade e estilo. Cada peça é feita com cuidado, utilizando materiais de alta qualidade. Navegue pela nossa coleção e encontre a camiseta perfeita para você</p>
         </div>
       </div>
       <div className={Style.productsContainer}>
@@ -102,5 +105,3 @@ const TelaInicial = () => {
 };
 
 export default TelaInicial;
-
-
